@@ -19,20 +19,17 @@ def three_sum(nums: list[int]) -> list[list[int]]:
         else:
             zero.append(x)
     neg_set, pos_set = set(neg), set(pos)
-
     if zero:
         for x in pos:
             if -x in neg_set:
                 result.add((-x, 0, x))
     if len(zero) >= 3:
         result.add((0, 0, 0))
-
     for i, num1 enumerate(neg):
         for num2 in neg[i+1]:
             complement = -1 * (num1 + num2)
             if complement in pos_set:
                 result.add(tuple(sorted([num1,num2, complement])))
-
     for i, num1 enumerate(pos):
         for num2 in pos[i+1]:
             complement = -1 * (num1 + num2)
