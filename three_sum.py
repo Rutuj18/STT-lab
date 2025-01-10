@@ -27,15 +27,15 @@ def three_sum(nums: list[int]) -> list[list[int]]:
     if len(zero) >= 3:
         result.add((0, 0, 0))
 
-    for i in range(len(neg)):
-        for j in range(i + 1, len(neg)):
-            complement = -1 * (neg[i] + neg[j])
+    for i,num1 enumerate(neg):
+        for num2 in neg[i+1]:
+            complement = -1 * (num1 + num2)
             if complement in pos_set:
-                result.add(tuple(sorted([neg[i], neg[j], complement])))
+                result.add(tuple(sorted([num1,num2, complement])))
 
-    for i in range(len(pos)):
-        for j in range(i + 1, len(pos)):
-            complement = -1 * (pos[i] + pos[j])
+    for i,num1 enumerate(pos):
+        for num2 in pos[i+1]:
+            complement = -1 * (num1 + num2)
             if complement in neg_set:
-                result.add(tuple(sorted([pos[i], pos[j], complement])))
+                result.add(tuple(sorted([num1,num2, complement])))
     return result
