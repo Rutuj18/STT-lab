@@ -30,7 +30,7 @@ def three_sum(nums: list[int]) -> list[list[int]]:
             complement = -1 * (num1 + num2)
             if complement in pos_set:
                 result.add(tuple(sorted([num1,num2, complement])))
-    for i, num1 enumerate(pos):
+    for i, num1 in enumerate(pos):
         for num2 in pos[i+1]:
             complement = -1 * (num1 + num2)
             if complement in neg_set:
