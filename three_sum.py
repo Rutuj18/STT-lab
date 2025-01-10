@@ -13,12 +13,12 @@ def three_sum(nums: list[int]) -> list[list[int]]:
         if x > 0:
             pos.append(x)
         elif x < 0:
-            neg.append(x)          
+            neg.append(x)  
     neg_set,pos_set = set(neg),set(pos)
     if 0 in nums:
         result.update({(-x,0,x) for x in pos if -x in neg_set})
         if nums.count(0) >= 3:
-            result.add((0,0,0))         
+            result.add((0,0,0))        
     for i, num1 in enumerate(neg):
         for num2 in neg[i+1]:
             complement = -1 * (num1 + num2)
