@@ -35,4 +35,4 @@ def three_sum(nums: list[int]) -> list[list[int]]:
             complement = -1 * (pos[i] + pos[j])
             if complement in neg_set:
                 result.add(tuple(sorted([pos[i], pos[j], complement])))
-return result
+    return result
