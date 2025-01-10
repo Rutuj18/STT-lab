@@ -1,6 +1,5 @@
 
-def three_sum(nums: list[int]) -> list[List[int]]:
-
+def three_sum(nums: list[int]) -> list[list[int]]:
    """
    Finds the unique triplets from given array of numbers having sum zero
 
