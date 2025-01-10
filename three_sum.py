@@ -5,7 +5,7 @@ input: A list of numbers
 output: A list contanining triplets having sum zero
 
 """
-def three_Sum(self, nums: List[int]) -> List[List[int]]:
+def three_sum(nums: List[int]) -> List[List[int]]:
     result = set()
     neg, pos, zero = [], [], []
     for x in nums:
