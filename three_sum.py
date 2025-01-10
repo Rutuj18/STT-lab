@@ -1,3 +1,10 @@
+"""
+Finds the unique triplets from given array of numbers having sum zero
+
+input: A list of numbers 
+output: A list contanining triplets having sum zero
+
+"""
 def three_Sum(self, nums: List[int]) -> List[List[int]]:
     result = set()
     neg, pos, zero = [], [], []
